@@ -11,11 +11,11 @@ import { Users, Calendar } from "lucide-react";
  */
 const CityCard = ({ city }: { city: City }) => {
     return (
-        <div className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33%-16px)] bg-white dark:bg-zinc-800 rounded-2xl shadow-md p-6 flex flex-col gap-3">
+        <div className="w-full border-t-4 border-indigo-400 sm:w-[calc(50%-12px)] lg:w-[calc(33%-16px)] bg-slate-50 dark:bg-zinc-800 rounded-2xl shadow-md p-6 flex flex-col gap-3">
 
             {/* City name and native name */}
             <div>
-                <h2 className="text-xl font-bold text-zinc-900 dark:text-white">{city.name}</h2>
+                <h2 className="text-xl font-bold text-indigo-400 dark:text-white">{city.name}</h2>
                 <p className="text-sm text-zinc-400">{city.name_native}</p>
             </div>
 
