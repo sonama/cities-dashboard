@@ -31,7 +31,7 @@ const CityCard = ({ city }: { city: City }) => {
             <div className="flex justify-between text-sm text-zinc-600 dark:text-zinc-300">
                 <div className="flex items-center gap-1">
                     <Users size={16} />
-                    <span>{Number(city.population).toLocaleString()}</span>
+                    <span>{Number(city.population).toLocaleString("en-US")}</span>
                 </div>
                 <div className="flex items-center gap-1">
                     <Calendar size={16} />
@@ -48,7 +48,7 @@ const CityCard = ({ city }: { city: City }) => {
                     {city.landmarks.map((landmark) => (
                         <li key={landmark} className="text-sm text-zinc-600 dark:text-zinc-300">• {landmark}</li>
                     ))}
-                </ul>
+                </ul>   
             </div>
         </div>
     )
