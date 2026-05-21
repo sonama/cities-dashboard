@@ -37,6 +37,10 @@ cities-dashboard/
 ├── utils/
 │   ├── Loading.tsx               # Reusable loading component
 │   └── Error.tsx                 # Reusable error component
+├── __tests__/
+│   ├── useCities.test.ts         # Hook tests
+│   ├── CityCard.test.tsx         # Component tests
+│   └── api.test.ts               # API route tests
     
     
 ```
@@ -91,3 +95,23 @@ npm run dev
 - **Custom Hooks** — Logic is separated into hooks for reusability and clean components
 - **API Routes** — Separate endpoints for cities, continents and countries for separation of concerns
 - **Debounce** — Search is debounced to avoid unnecessary re-renders on every keystroke
+
+## Tests
+
+The following are tested:
+
+- **`useCities`** — filter by keyword, continent, country, sort and reset
+- **`CityCard`** — renders city name, country, population, founded and landmarks
+- **API Routes** — `/api/cities`, `/api/continents`, `/api/countries` return correct data
+
+Run tests:
+```bash
+npm test
+```
+
+Run with coverage:
+```bash
+npm run test:coverage
+```
+
+Target coverage: 70%+
